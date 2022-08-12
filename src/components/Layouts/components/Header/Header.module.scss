@@ -1,0 +1,29 @@
+.wrapper {
+    height: 64px;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 241px;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    min-width: 660px;
+}
+
+.backgroud {
+    background-color: #000;
+    height: 64px;
+    position: fixed;
+    left: 241px;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    opacity: 0;
+}
+
+.content {
+    z-index: 5;
+    background-color: transparent;
+}
