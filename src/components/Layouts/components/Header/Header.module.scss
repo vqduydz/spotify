@@ -1,29 +1,123 @@
 .wrapper {
     height: 64px;
-    width: 100%;
-    min-width: 0;
+    // min-width: 660px;
     display: flex;
     align-items: center;
     position: fixed;
     left: 241px;
-    top: 0;
     right: 0;
     z-index: 3;
-    min-width: 660px;
+}
+.header-containter {
+    width: 100%;
+    display: flex;
+    position: relative;
 }
 
 .backgroud {
     background-color: #000;
     height: 64px;
-    position: fixed;
-    left: 241px;
+    position: absolute;
+    left: 0px;
     top: 0;
     right: 0;
     z-index: 4;
     opacity: 0;
 }
 
+.container {
+    width: 100%;
+    height: 100%;
+}
+
 .content {
-    z-index: 5;
+    padding: 12px 32px;
+    padding-inline-end: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
     background-color: transparent;
+    z-index: 5;
+}
+
+.directional {
+    display: flex;
+
+    .back-btn,
+    .forward-btn {
+        height: 35px;
+        width: 35px;
+        margin-right: 16px;
+        font-size: 3rem;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 5;
+    }
+}
+
+.search {
+    background-color: red;
+    width: 100%;
+    flex: 2;
+    .search-container {
+        align-items: center;
+        display: flex;
+        pointer-events: none;
+    }
+}
+
+.search-content {
+    flex: 0 1 364px;
+    position: relative;
+    height: 100%;
+    input {
+        border: 0;
+        border-radius: 500px;
+        color: #000;
+        height: 40px;
+        padding: 6px 48px;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+}
+
+.icon {
+    width: 360px;
+    position: absolute;
+    top: 0;
+}
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 12px;
+}
+
+.search-icon,
+.clear {
+    pointer-events: none;
+    color: #121212;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 3rem;
+    align-items: center;
+    display: flex;
+}
+
+.search-icon {
+    flex: 1;
+}
+
+.actions {
+    position: relative;
+    // display: flex;
+    // flex: 1;
+    background-color: purple;
 }
