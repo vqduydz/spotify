@@ -1,9 +1,10 @@
 .wrapper,
 .container {
-    width: 241px;
+    width: var(--sidebar-with);
 }
 
 .wrapper {
+    padding-top: 24px;
     min-height: 1000px;
     position: relative;
     z-index: 100;
@@ -15,15 +16,14 @@
     position: fixed;
 }
 .logo {
-    width: 100%;
+    flex: 1;
     margin-bottom: 18px;
-    padding: 12px 24px;
-    position: relative;
+    padding: 0 24px;
     background-color: transparent;
-    text-align: unset;
+    border: 0;
 
     img {
-        height: 40px;
+        height: var(--clone-header-height);
         max-width: 131px;
         width: 100%;
     }

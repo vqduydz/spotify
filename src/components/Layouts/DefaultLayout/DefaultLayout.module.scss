@@ -10,10 +10,11 @@
 .content {
     min-width: 0;
     display: flex;
-    padding-top: 64px;
+    padding-top: var(--header-height);
     width: 100%;
     background-color: #121212;
     flex: 1;
     position: relative;
-    min-height: 100%;
+    height: calc(100% - var(--header-height));
+    // overflow-y: scroll;
 }
