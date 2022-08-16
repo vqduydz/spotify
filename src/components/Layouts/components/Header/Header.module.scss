@@ -1,6 +1,96 @@
+@media only screen and (max-width: 1200px) {
+    .wrapper {
+        left: var(--sidebar-with-rep) !important;
+    }
+    .container {
+        .content {
+            padding: 16px;
+            .directional {
+                .back-btn {
+                    margin-right: 12px;
+                }
+                .forward-btn {
+                    display: none;
+                }
+            }
+        }
+        .actions {
+            .main-action {
+                margin-left: -16px;
+                .header-btn {
+                    padding: 8px 32px;
+                }
+                .header-btn:nth-child(1) {
+                    margin-right: 12px;
+                }
+            }
+
+            .spboder {
+                margin: 0 8px;
+            }
+        }
+    }
+}
+
+//
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        .content {
+            padding: 10px;
+            .directional {
+                .back-btn {
+                    margin-right: 8px;
+                }
+            }
+        }
+        .actions {
+            .header-btn {
+                padding: 0 12px;
+                margin: 0;
+            }
+            .main-action {
+                margin-left: -24px;
+            }
+            .spboder {
+                margin: 0 4px;
+            }
+        }
+    }
+}
+
+//
+
+@media only screen and (max-width: 980px) {
+    .container {
+        .actions {
+            .header-btn {
+                padding: 8px 32px;
+            }
+            .sub-action {
+                display: none;
+            }
+            .main-action {
+                margin-left: 0px;
+            }
+
+            .spboder {
+                display: none;
+            }
+            .sub-action-bar {
+                display: flex;
+            }
+            .sub-action-bar-container {
+                display: flex;
+            }
+        }
+    }
+}
+
+///
+
 .wrapper {
     height: var(--header-height);
-    // min-width: 660px;
     display: flex;
     align-items: center;
     position: fixed;
@@ -32,14 +122,6 @@
 }
 
 .content {
-    // padding: 16px 32px;
-    // padding-inline-end: 32px;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-    // position: relative;
-    // background-color: transparent;
-
     padding: 16px 32px;
     align-items: center;
     display: flex;
@@ -73,8 +155,9 @@
 }
 
 .search {
+    min-width: 160px;
     width: 100%;
-    flex: 2;
+    flex: 1;
     .search-container {
         align-items: center;
         display: flex;
@@ -96,11 +179,15 @@
     }
 }
 
+input:not(:placeholder-shown) ~ .clear {
+    display: flex;
+}
+
 .search-icon,
 .clear {
     top: calc((var(--clone-header-height) - var(--icon-size)) / 2);
     position: absolute;
-    color: #121212;
+    // color: #121212;
     background-color: transparent;
     border: 0;
     padding: 0;
@@ -115,23 +202,77 @@
 
 .clear {
     right: 16px;
+    display: none;
 }
 
 .actions {
     position: relative;
-    .signup {
-        margin: 0;
-        padding: 8px 32px 8px 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.sub-action,
+.main-action {
+    display: flex;
+    margin: 0;
+}
+.main-action {
+    .header-btn:nth-child(1) {
+        margin-right: 24px;
+    }
+}
+
+.spboder {
+    background: #fff;
+    height: 25px;
+    margin: 16px;
+    width: 1px;
+}
+
+.sub-action-bar {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    .bar-btn {
+        border-radius: 500px;
+
+        padding: 4px;
         background-color: transparent;
-        color: var(--text-subdued);
+        color: white;
         &:hover {
-            background-color: transparent;
+            background-color: #282828;
         }
     }
 }
-.spboder {
-    content: '';
-    border: #fff 1px solid;
-    margin: 16px;
+
+.sub-action-bar-container {
+    background-color: #282828;
+    border-radius: 4px;
+    box-shadow: 0 16px 24px rgb(0 0 0 / 30%), 0 6px 8px rgb(0 0 0 / 20%);
+    min-width: 196px;
+    min-width: 128px;
+    overflow-y: auto;
+    margin-top: -10px;
+    padding: 4px;
+    display: none;
+
+    .header-btn {
+        height: var(--clone-header-height);
+        width: 188px;
+        display: flex;
+        text-align: left;
+        margin: 0;
+        padding: 12px 8px 12px 12px;
+        font-size: 1.4rem;
+        color: var(--text-subdued-sidebar);
+        fill: var(--text-subdued-sidebar);
+        letter-spacing: normal;
+
+        &:hover {
+            color: #fff;
+            fill: #fff;
+        }
+    }
 }

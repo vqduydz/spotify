@@ -1,0 +1,47 @@
+.wrapper {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.now-playing {
+    background-color: #181818;
+    border-top: 1px solid #282828;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-width: 620px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.widget,
+.controls,
+.more-controls {
+    min-height: 91px;
+    flex: 1;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.widget {
+    background-color: aqua;
+}
+
+.controls {
+    background-color: orange;
+}
+
+.more-controls {
+    background-color: yellow;
+}
