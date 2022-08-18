@@ -1,15 +1,32 @@
 import styles from './Header.module.scss';
 import Button from '~/components/Button';
 import images from '~/assets/img';
-import { Wrapper as PopperWrapper } from '~/components/Popper';
-import { ReactComponent as Linkto } from '~/assets/img/linktoIcon.svg';
 
 import classNames from 'classnames/bind';
-import Tippy from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import InterlockingPoppers from '~/components/Popper/InterlockingPoppers';
+import { ReactComponent as Linkto } from '~/assets/img/linktoIcon.svg';
 
 const cx = classNames.bind(styles);
+
+const CONTENT = [
+    {
+        icon: <Linkto />,
+        title: 'Premium',
+        to: '/premium',
+    },
+    {
+        icon: <Linkto />,
+        title: 'Support',
+        to: '/support',
+    },
+    {
+        icon: <Linkto />,
+        title: 'Download',
+        to: '/download',
+    },
+];
 
 function Header() {
     return (
@@ -64,31 +81,11 @@ function Header() {
                                     Log in
                                 </Button>
                             </div>
-
-                            <Tippy
-                                interactive // cho phép tương tác
-                                trigger="click"
-                                placement="bottom-end"
-                                render={(attrs) => (
-                                    <div className={cx('sub-action-bar-container')} tabIndex="-1" {...attrs}>
-                                        <PopperWrapper>
-                                            <Button text rightIcon={<Linkto />} className={cx('header-btn')}>
-                                                Premium
-                                            </Button>
-                                            <Button text rightIcon={<Linkto />} className={cx('header-btn')}>
-                                                Support
-                                            </Button>
-                                            <Button text rightIcon={<Linkto />} className={cx('header-btn')}>
-                                                Download
-                                            </Button>
-                                        </PopperWrapper>
-                                    </div>
-                                )}
-                            >
+                            <InterlockingPoppers content={CONTENT}>
                                 <div className={cx('sub-action-bar')}>
                                     <Button className={cx('bar-btn')}>{<FontAwesomeIcon icon={faBars} />}</Button>
                                 </div>
-                            </Tippy>
+                            </InterlockingPoppers>
                         </div>
                     </div>
                 </div>

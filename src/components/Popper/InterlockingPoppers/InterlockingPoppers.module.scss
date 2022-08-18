@@ -1,0 +1,29 @@
+.container {
+    background-color: #282828;
+    border-radius: 4px;
+    box-shadow: 0 16px 24px rgb(0 0 0 / 30%), 0 6px 8px rgb(0 0 0 / 20%);
+    min-width: 196px;
+    min-width: 128px;
+    overflow-y: auto;
+    margin-top: -10px;
+    padding: 4px;
+
+    .content {
+        height: var(--clone-header-height);
+        width: 188px;
+        display: flex;
+        text-align: left;
+        margin: 0;
+        padding: 12px 8px 12px 12px;
+        font-size: 1.4rem;
+        color: var(--text-subdued-sidebar);
+        fill: var(--text-subdued-sidebar);
+        letter-spacing: normal;
+
+        &:hover {
+            color: #fff;
+            fill: #fff;
+            background-color: hsla(0, 0%, 100%, 0.1);
+        }
+    }
+}

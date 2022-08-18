@@ -8,11 +8,14 @@
     padding: 0 32px;
     user-select: none;
     white-space: nowrap;
+    font-family: 'Circular Std', sans-serif;
 }
 .icon {
     display: inline-block;
     max-width: 24px;
     max-height: 24px;
+    text-align: center;
+    align-items: center;
 }
 
 .title {
