@@ -65,7 +65,7 @@ function Header() {
                                 <Button text scale to={'/signup'} className={cx('header-btn')}>
                                     Sign up
                                 </Button>
-                                <Button primary scale className={cx('header-btn')}>
+                                <Button primary scale to={'/login'} className={cx('header-btn')}>
                                     Log in
                                 </Button>
                             </div>

@@ -1,7 +1,4 @@
 @media only screen and (max-width: 1200px) {
-    .wrapper {
-        left: var(--sidebar-with-rep) !important;
-    }
     .container {
         .content {
             padding: 16px;
@@ -15,16 +12,6 @@
             }
         }
         .actions {
-            .main-action {
-                margin-left: -16px;
-                .header-btn {
-                    padding: 8px 32px;
-                }
-                // .header-btn:nth-child(1) {
-                //     margin-right: -10px;
-                // }
-            }
-
             .spboder {
                 margin: 0 8px;
             }
@@ -32,36 +19,17 @@
     }
 }
 
-//
-
 @media only screen and (max-width: 1024px) {
-    .container {
-        .content {
-            padding: 10px;
-            .directional {
-                .back-btn {
-                    margin-right: 8px;
-                }
-            }
-        }
-        .actions {
-            .header-btn {
-                padding: 0 8px;
-                margin: 0;
-            }
-            .main-action {
-                margin-left: -24px;
-            }
-            .spboder {
-                margin: 0 4px;
+    .actions {
+        .main-action {
+            .header-btn:nth-child(1) {
+                margin-right: 22px;
             }
         }
     }
 }
 
-//
-
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 960px) {
     .container {
         .actions {
             .header-btn {
@@ -83,8 +51,6 @@
         }
     }
 }
-
-///
 
 .wrapper {
     grid-area: main-view;
@@ -188,7 +154,6 @@ input:not(:placeholder-shown) ~ .clear {
 .clear {
     top: calc((var(--clone-header-height) - var(--icon-size)) / 2);
     position: absolute;
-    // color: #121212;
     background-color: transparent;
     border: 0;
     padding: 0;
@@ -231,7 +196,7 @@ input:not(:placeholder-shown) ~ .clear {
 
 .main-action {
     .header-btn:nth-child(1) {
-        // margin-right: 12px;
+        margin-right: 24px;
         letter-spacing: 0;
     }
     .header-btn:nth-child(2) {

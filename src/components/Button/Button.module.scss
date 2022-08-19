@@ -12,10 +12,14 @@
 }
 .icon {
     display: inline-block;
+    min-width: 23px;
+    min-height: 23px;
     max-width: 24px;
     max-height: 24px;
     text-align: center;
     align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 .title {

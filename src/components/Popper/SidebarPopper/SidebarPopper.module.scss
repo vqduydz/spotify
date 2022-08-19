@@ -1,0 +1,53 @@
+.popper {
+    margin-left: -50px;
+    background-color: #0d72ea;
+    border-radius: 8px;
+    box-shadow: 0 4px 40px rgb(0 0 0 / 30%);
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    outline: 0;
+    position: relative;
+    text-align: start;
+}
+
+.popper-container {
+    padding: 16px;
+    position: relative;
+}
+.content {
+    max-width: 336px;
+    min-width: 300px;
+    position: relative;
+    z-index: 1;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    h2 {
+        margin: 0;
+        width: 100%;
+        font-size: 1.8rem;
+        box-sizing: border-box;
+        margin-block: 0px;
+        // font-weight: 700;
+    }
+}
+.text {
+    margin-block: 0px;
+    margin: 0;
+}
+.action {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    margin-top: 24px;
+    .not-now {
+        color: #fff;
+        padding: 8px 32px;
+    }
+}
