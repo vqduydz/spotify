@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import Button from '~/components/Button';
-import styles from './InterlockingPoppers.module.scss';
+import styles from './HeaderPopper.module.scss';
 
 const cx = classNames.bind(styles);
 

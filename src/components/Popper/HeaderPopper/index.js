@@ -2,14 +2,12 @@ import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
 
 import { Wrapper as PopperWrapper } from '~/components/Popper/';
-import styles from './InterlockingPoppers.module.scss';
-// import Button from '~/components/Button';
-// import { ReactComponent as Linkto } from '~/assets/img/linktoIcon.svg';
+import styles from './HeaderPopper.module.scss';
 import MenuItem from './MenuItem';
 
 const cx = classNames.bind(styles);
 
-function InterlockingPoppers({ children, content = [] }) {
+function HeaderPopper({ children, content = [] }) {
     const renderContent = () => {
         return content.map((item, index) => <MenuItem key={index} data={item} />);
     };
@@ -30,4 +28,4 @@ function InterlockingPoppers({ children, content = [] }) {
     );
 }
 
-export default InterlockingPoppers;
+export default HeaderPopper;

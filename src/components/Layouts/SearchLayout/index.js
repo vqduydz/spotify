@@ -1,21 +1,22 @@
+import HeaderSearch from '../components/HeaderSearch';
+
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import classNames from 'classnames/bind';
-import Header from '../components/Header';
 
-import styles from './DefaultLayout.module.scss';
+import styles from './SearchLayout.module.scss';
 
 const cx = classNames.bind(styles);
 
-function DefaultLayouut({ children }) {
+function SearchLayout({ children }) {
     return (
         <div className={cx('wrapper')}>
             <Sidebar />
-            <Header />
+            <HeaderSearch />
             <div className={cx('content')}>{children}</div>
             <Footer />
         </div>
     );
 }
 
-export default DefaultLayouut;
+export default SearchLayout;

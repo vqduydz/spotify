@@ -1,4 +1,4 @@
-import styles from './Header.module.scss';
+import styles from './HeaderSearch.module.scss';
 import Button from '~/components/Button';
 import images from '~/assets/img';
 
@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import HeaderPopper from '~/components/Popper/HeaderPopper';
 import { ReactComponent as Linkto } from '~/assets/img/linktoIcon.svg';
-// import SidebarPopper from '~/components/Popper/SidebarPopper';
 
 const cx = classNames.bind(styles);
 
@@ -29,7 +28,7 @@ const CONTENT = [
     },
 ];
 
-function Header() {
+function HeaderSearch() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('header-containter')}>
@@ -46,6 +45,19 @@ function Header() {
                             </button>
                         </div>
 
+                        <div className={cx('search')}>
+                            <div className={cx('search-container')}>
+                                <div className={cx('search-content')}>
+                                    <input placeholder="Artists, songs or podcasts" spellCheck={false} />
+                                    <div className={cx('search-icon')}>
+                                        <img src={images.search} alt="" />
+                                    </div>
+                                    <button className={cx('clear')}>
+                                        <img src={images.clear} alt="" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                         <div className={cx('actions')}>
                             <div className={cx('sub-action')}>
                                 <Button text scale to={'/premium'} className={cx('header-btn')}>
@@ -65,7 +77,7 @@ function Header() {
                                 <Button text scale to={'/signup'} className={cx('header-btn')}>
                                     Sign up
                                 </Button>
-                                <Button primary scale className={cx('header-btn')}>
+                                <Button primary scale to={'/login'} className={cx('header-btn')}>
                                     Log in
                                 </Button>
                             </div>
@@ -82,4 +94,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default HeaderSearch;

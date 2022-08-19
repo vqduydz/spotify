@@ -14,14 +14,14 @@ function Sidebar() {
             <div className={cx('background')}></div>
             <div className={cx('container')}>
                 <div className={cx('content')}>
-                    <button className={cx('logo')}>
+                    <Button className={cx('logo')} href="/">
                         <img src={images.logo} alt="Spotify" />
-                    </button>
+                    </Button>
                     <div>
-                        <Button text className={cx('sidebar-btn')} href="/" leftIcon={<HomeIcon />}>
+                        <Button text className={cx('sidebar-btn')} to="/" leftIcon={<HomeIcon />}>
                             Home
                         </Button>
-                        <Button text className={cx('sidebar-btn')} leftIcon={<SearchIcon />}>
+                        <Button text className={cx('sidebar-btn')} to="/search" leftIcon={<SearchIcon />}>
                             Search
                         </Button>
                         <Button text className={cx('sidebar-btn')} leftIcon={<LibraryIcon />}>
