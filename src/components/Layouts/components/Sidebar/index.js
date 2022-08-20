@@ -46,7 +46,7 @@ function Sidebar() {
                     <Button className={cx('logo')} href="/">
                         <img src={images.logo} alt="Spotify" />
                     </Button>
-                    <div>
+                    <div className={cx('top-sidebar')}>
                         <Button text className={cx('sidebar-btn')} to="/" leftIcon={<HomeIcon />}>
                             Home
                         </Button>
@@ -58,14 +58,14 @@ function Sidebar() {
                         <SidebarPopper content={LIBRARY_POPPER}>
                             <div>
                                 <Button text className={cx('sidebar-btn')} leftIcon={<LibraryIcon />}>
-                                    Library
+                                    Your Library
                                 </Button>
                             </div>
                         </SidebarPopper>
                     </div>
-                    <div>
+                    <div className={cx('middle-sidebar')}>
                         <SidebarPopper content={CREATE_PLAYLIST_POPPER}>
-                            <div className={cx('add-icon')}>
+                            <div>
                                 <Button text className={cx('sidebar-btn')} leftIcon={<AddIcon />}>
                                     Create Playlist
                                 </Button>

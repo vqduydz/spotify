@@ -9,6 +9,7 @@ function Button({
     href,
     onClick,
     // set/add class for button as props
+    outline = false,
     primary = false,
     text = false,
     scale = false,
@@ -54,6 +55,7 @@ function Button({
 
     // set/add class for button similar props of Button component
     const classes = cx('wrapper', {
+        outline,
         primary,
         text,
         scale,

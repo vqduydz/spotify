@@ -41,6 +41,17 @@
     }
 }
 
+.outline {
+    display: inline-flex;
+    border-radius: 500px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #727272;
+    &:hover {
+        border: 1px solid currentColor;
+    }
+}
+
 .text {
     letter-spacing: 1px;
     margin: 0;

@@ -1,8 +1,8 @@
-import HeaderSearch from '../components/HeaderSearch';
+import classNames from 'classnames/bind';
 
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
-import classNames from 'classnames/bind';
+import HeaderSearch from '../components/HeaderSearch';
 
 import styles from './SearchLayout.module.scss';
 

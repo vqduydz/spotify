@@ -12,13 +12,17 @@ function SidebarPopper({ children, content = [] }) {
         return content.map((item, index) => <ContentPopper key={index} data={item} />);
     };
 
+    const classes = cx(
+        'popper',
+        //add clasaname for tippy
+    );
     return (
         <Tippy
             interactive // cho phép tương tác
             trigger="click"
-            placement="right-end"
+            placement="right-start"
             render={(attrs) => (
-                <div className={cx('popper')} tabIndex="-1" {...attrs}>
+                <div className={classes} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('popper-container')}>{renderContent()}</PopperWrapper>
                 </div>
             )}

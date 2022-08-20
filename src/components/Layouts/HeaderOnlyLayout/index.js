@@ -1,10 +1,10 @@
-import Header from '../components/Header';
+import HeaderSearch from '../components/HeaderSearch';
 
 function HeaderOnlyLayout({ children }) {
     return (
         <div>
             <div>
-                <Header />
+                <HeaderSearch />
             </div>
             <div>{children}</div>
         </div>

@@ -17,7 +17,7 @@ function ContentPopper({ data }) {
                 <Button text scale className={cx('not-now')}>
                     Not now
                 </Button>
-                <Button primary scale className={cx('log-in')}>
+                <Button primary scale className={cx('log-in')} to="/login">
                     Log in
                 </Button>
             </div>
