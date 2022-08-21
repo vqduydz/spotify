@@ -7,18 +7,19 @@ import MenuItem from './MenuItem';
 
 const cx = classNames.bind(styles);
 
-function HeaderPopper({ children, content = [] }) {
+function HeaderPopper({ children, content = [], className }) {
     const renderContent = () => {
         return content.map((item, index) => <MenuItem key={index} data={item} />);
     };
 
+    const classes = cx('popper', className);
     return (
         <Tippy
             interactive // cho phép tương tác
             trigger="click"
             placement="bottom-end"
             render={(attrs) => (
-                <div className={cx('popper')} tabIndex="-1" {...attrs}>
+                <div className={classes} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('container')}>{renderContent()}</PopperWrapper>
                 </div>
             )}

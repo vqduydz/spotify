@@ -27,3 +27,18 @@
         }
     }
 }
+.separate {
+    border-top: 1px solid #ffffff1a;
+}
+.user-content-popper {
+    margin-top: 10px;
+    .content {
+        font-weight: 400;
+        cursor: context-menu;
+        color: #fff;
+        fill: #fff;
+        &:hover {
+            background-color: #ffffff1a;
+        }
+    }
+}

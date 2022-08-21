@@ -18,6 +18,8 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
+let currentUser = true;
+
 const LIBRARY_POPPER = [
     {
         title: 'Enjoy Your Library',
@@ -55,33 +57,69 @@ function Sidebar() {
                             Search
                         </Button>
 
-                        <SidebarPopper content={LIBRARY_POPPER}>
+                        {currentUser ? (
                             <div>
-                                <Button text className={cx('sidebar-btn')} leftIcon={<LibraryIcon />}>
+                                <Button to="/yourlibrary" text className={cx('sidebar-btn')} leftIcon={<LibraryIcon />}>
                                     Your Library
                                 </Button>
                             </div>
-                        </SidebarPopper>
+                        ) : (
+                            <SidebarPopper content={LIBRARY_POPPER}>
+                                <div>
+                                    <Button text className={cx('sidebar-btn')} leftIcon={<LibraryIcon />}>
+                                        Your Library
+                                    </Button>
+                                </div>
+                            </SidebarPopper>
+                        )}
                     </div>
                     <div className={cx('middle-sidebar')}>
-                        <SidebarPopper content={CREATE_PLAYLIST_POPPER}>
-                            <div>
-                                <Button text className={cx('sidebar-btn')} leftIcon={<AddIcon />}>
-                                    Create Playlist
-                                </Button>
-                            </div>
-                        </SidebarPopper>
-                        <SidebarPopper content={LIKED_SONGS_POPPER}>
-                            <div>
-                                <Button
-                                    text
-                                    className={cx('sidebar-btn')}
-                                    leftIcon={<FontAwesomeIcon icon={faHeart} />}
-                                >
-                                    Liked Songs
-                                </Button>
-                            </div>
-                        </SidebarPopper>
+                        {currentUser ? (
+                            <>
+                                <div>
+                                    <Button
+                                        to="createplaylist"
+                                        text
+                                        className={cx('sidebar-btn')}
+                                        leftIcon={<AddIcon />}
+                                    >
+                                        Create Playlist
+                                    </Button>
+                                </div>
+
+                                <div>
+                                    <Button
+                                        to="/likedsongs"
+                                        text
+                                        className={cx('sidebar-btn')}
+                                        leftIcon={<FontAwesomeIcon icon={faHeart} />}
+                                    >
+                                        Liked Songs
+                                    </Button>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <SidebarPopper content={CREATE_PLAYLIST_POPPER}>
+                                    <div>
+                                        <Button text className={cx('sidebar-btn')} leftIcon={<AddIcon />}>
+                                            Create Playlist
+                                        </Button>
+                                    </div>
+                                </SidebarPopper>
+                                <SidebarPopper content={LIKED_SONGS_POPPER}>
+                                    <div>
+                                        <Button
+                                            text
+                                            className={cx('sidebar-btn')}
+                                            leftIcon={<FontAwesomeIcon icon={faHeart} />}
+                                        >
+                                            Liked Songs
+                                        </Button>
+                                    </div>
+                                </SidebarPopper>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>

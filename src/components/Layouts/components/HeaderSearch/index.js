@@ -32,6 +32,27 @@ const CONTENT = [
 ];
 
 function HeaderSearch() {
+    const USER_content = [
+        {
+            icon: <Linkto />,
+            title: 'Account',
+            // to: '/account',
+        },
+        {
+            title: 'Profile',
+            // to: '/profile',
+        },
+        ...CONTENT,
+
+        {
+            title: 'Settings',
+            // to: '/Settings',
+        },
+        {
+            title: 'Log out',
+            separate: true,
+        },
+    ];
     return (
         <header className={cx('wrapper')}>
             <div className={cx('header-containter')}>
@@ -67,13 +88,15 @@ function HeaderSearch() {
                                     <Button outline scale to={'/premium'} className={cx('user-action-btn')}>
                                         Upgrade
                                     </Button>
-                                    <button className={cx('user-btn')}>
-                                        <div className={cx('user-box')}>
-                                            <UserIcon />
-                                        </div>
-                                        <span className={cx('user-name')}>Duy Vu</span>
-                                        {<FontAwesomeIcon icon={faAngleDown} />}
-                                    </button>
+                                    <HeaderPopper content={USER_content} className={cx('user-content-popper')}>
+                                        <button className={cx('user-btn')}>
+                                            <div className={cx('user-box')}>
+                                                <UserIcon />
+                                            </div>
+                                            <span className={cx('user-name')}>Duy Vu</span>
+                                            {<FontAwesomeIcon icon={faAngleDown} />}
+                                        </button>
+                                    </HeaderPopper>
                                 </div>
                             ) : (
                                 <>

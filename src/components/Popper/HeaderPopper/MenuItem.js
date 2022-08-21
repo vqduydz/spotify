@@ -5,8 +5,9 @@ import styles from './HeaderPopper.module.scss';
 const cx = classNames.bind(styles);
 
 function MenuItem({ data }) {
+    const classes = cx('content', { separate: data.separate });
     return (
-        <Button text className={cx('content')} rightIcon={data.icon} to={data.to}>
+        <Button text className={classes} rightIcon={data.icon} to={data.to}>
             {data.title}
         </Button>
     );
