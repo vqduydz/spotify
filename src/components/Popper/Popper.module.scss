@@ -1,7 +1,8 @@
 .wrapper {
     width: 100%;
+    min-width: 196px;
     max-height: calc(100vh - 96px);
-    min-height: 50px;
+    min-height: 100px;
     overflow-y: auto;
     background-color: var(--background-sub);
     box-sizing: border-box;

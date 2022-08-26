@@ -8,6 +8,7 @@ import { faAngleDown, faBars } from '@fortawesome/free-solid-svg-icons';
 import HeaderPopper from '~/components/Popper/HeaderPopper';
 import { ReactComponent as Linkto } from '~/assets/img/linktoIcon.svg';
 import { ReactComponent as UserIcon } from '~/assets/img/user.svg';
+import Search from '../childComponent/Search';
 
 const cx = classNames.bind(styles);
 
@@ -69,19 +70,8 @@ function HeaderSearch() {
                             </button>
                         </div>
 
-                        <div className={cx('search')}>
-                            <div className={cx('search-container')}>
-                                <div className={cx('search-content')}>
-                                    <input placeholder="Artists, songs or podcasts" spellCheck={false} />
-                                    <div className={cx('search-icon')}>
-                                        <img src={images.search} alt="" />
-                                    </div>
-                                    <button className={cx('clear')}>
-                                        <img src={images.clear} alt="" />
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                        <Search />
+
                         <div className={cx('actions')}>
                             {currentUser ? (
                                 <div className="user-action">

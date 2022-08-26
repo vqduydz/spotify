@@ -1,5 +1,13 @@
-.popper {
-    background-color: red;
-    width: 200px;
-    height: 200px;
+.tracks {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    min-height: 300px;
+    min-width: 100%;
+    position: relative;
+    .title {
+        flex: 1;
+        font-size: 2.4rem;
+        font-weight: 900;
+    }
 }

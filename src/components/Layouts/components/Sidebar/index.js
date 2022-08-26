@@ -6,15 +6,10 @@ import { ReactComponent as HomeIcon } from '~/assets/img/homeIcon.svg';
 import { ReactComponent as SearchIcon } from '~/assets/img/searchIcon.svg';
 import { ReactComponent as LibraryIcon } from '~/assets/img/libraryIcon.svg';
 import { ReactComponent as AddIcon } from '~/assets/img/addicon.svg';
-// import { ReactComponent as Heart } from '~/assets/img/hearticon.svg';
-
-// import { Wrapper as PopperWrapper } from '~/components/Popper';
-// import Tippy from '@tippyjs/react/headless';
 
 import SidebarPopper from '~/components/Popper/SidebarPopper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-// import CreatePlaylistPopper from '~/components/Popper/SidebarPopper/CreatePlaylistPopper';
 
 const cx = classNames.bind(styles);
 
@@ -42,7 +37,7 @@ const LIKED_SONGS_POPPER = [
 function Sidebar() {
     return (
         <aside className={cx('wrapper')}>
-            <div className={cx('background')}></div>
+            {/* <div className={cx('background')}></div> */}
             <div className={cx('container')}>
                 <div className={cx('content')}>
                     <Button className={cx('logo')} href="/">

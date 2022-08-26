@@ -67,7 +67,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
-    overflow: hidden;
+    min-width: 768px;
 }
 
 button {
